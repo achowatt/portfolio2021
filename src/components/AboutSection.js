@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 const AboutSection = ({ setSectionShown }) => {
   const [ref, inView] = useInView({
     /* Optional options */
-    threshold: 1,
+    threshold: 0.51,
   });
 
   useEffect(() => {
@@ -14,8 +14,8 @@ const AboutSection = ({ setSectionShown }) => {
   }, [inView, setSectionShown]);
 
   return (
-    <section className="about home-sections">
-      <div ref={ref} className="content">
+    <section ref={ref} className="about home-sections">
+      <div className="content">
         <h1>About me</h1>
         <p>
           My name is Anna Chowattanakul. I am currently working on several

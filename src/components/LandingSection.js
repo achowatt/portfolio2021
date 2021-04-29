@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 
 const LandingSection = ({ setSectionShown }) => {
   const [ref, inView] = useInView({
-    threshold: 1,
+    threshold: 0.51,
   });
 
   useEffect(() => {
@@ -13,8 +13,8 @@ const LandingSection = ({ setSectionShown }) => {
   }, [inView, setSectionShown]);
 
   return (
-    <section className="landing-page home-sections">
-      <div ref={ref} className="content">
+    <section ref={ref} className="landing-page home-sections">
+      <div className="content">
         <h1>
           Hello, I'm <span className="emphasize-text">Anna.</span>
         </h1>

@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 
 const ContactSection = ({ setSectionShown }) => {
   const [ref, inView] = useInView({
-    threshold: 1,
+    threshold: 0.51,
   });
 
   useEffect(() => {
@@ -13,8 +13,8 @@ const ContactSection = ({ setSectionShown }) => {
   }, [inView, setSectionShown]);
 
   return (
-    <section className="contact home-sections">
-      <div ref={ref} className="content">
+    <section ref={ref} className="contact home-sections">
+      <div className="content">
         <h1>Contact</h1>
         <form
         // action="#"

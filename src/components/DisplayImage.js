@@ -13,33 +13,33 @@ const DisplayImage = ({ sectionShown }) => {
       setTransition("transition");
       setTimeout(function () {
         setImage(designandcode);
-      }, 500);
+      }, 1000);
     } else if (sectionShown === "aboutSection") {
       setTransition("transition");
       setTimeout(function () {
         setImage(anna);
-      }, 500);
+      }, 1000);
     } else if (sectionShown === "skillsSection") {
       setTransition("transition");
       setTimeout(function () {
         setImage(skills);
-      }, 500);
+      }, 1000);
     } else if (sectionShown === "contactSection") {
       setTransition("transition");
       setTimeout(function () {
         setImage(contact);
-      }, 500);
+      }, 1000);
     } else {
       setTransition("transition");
       setTimeout(function () {
         setImage(designandcode);
-      }, 500);
+      }, 1000);
     }
   }, [sectionShown]);
 
   setTimeout(function () {
     setTransition("");
-  }, 500);
+  }, 1000);
 
   return (
     <div
