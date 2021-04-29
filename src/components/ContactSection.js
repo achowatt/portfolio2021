@@ -10,18 +10,18 @@ const ContactSection = ({ setSectionShown }) => {
     if (inView) {
       setSectionShown("contactSection");
     }
-  }, [inView]);
+  }, [inView, setSectionShown]);
 
   return (
     <section className="contact home-sections">
       <div ref={ref} className="content">
         <h1>Contact</h1>
         <form
-          action="#"
-          name="contact-page"
-          className="contact-form"
-          autocomplete="off"
-          netlify
+        // action="#"
+        // name="contact-page"
+        // className="contact-form"
+        // autoComplete="off"
+        // netlify="true"
         >
           <div className="form-group form-group-name">
             <label htmlFor="name" className="form-label">
@@ -72,7 +72,7 @@ const ContactSection = ({ setSectionShown }) => {
               name="message"
               className="form-input form-message"
               id="message"
-              spellcheck="true"
+              spellCheck="true"
               placeholder="Please leave a message!"
               required
             ></textarea>

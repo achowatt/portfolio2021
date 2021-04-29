@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 const LandingSection = ({ setSectionShown }) => {
@@ -8,10 +8,9 @@ const LandingSection = ({ setSectionShown }) => {
 
   useEffect(() => {
     if (inView) {
-      console.log("hello from landing");
       setSectionShown("landingSection");
     }
-  }, [inView]);
+  }, [inView, setSectionShown]);
 
   return (
     <section className="landing-page home-sections">

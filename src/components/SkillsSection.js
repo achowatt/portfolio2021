@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 const SkillsSection = ({ setSectionShown }) => {
@@ -10,7 +10,7 @@ const SkillsSection = ({ setSectionShown }) => {
     if (inView) {
       setSectionShown("skillsSection");
     }
-  }, [inView]);
+  }, [inView, setSectionShown]);
   return (
     <section className="skills home-sections">
       <div ref={ref} className="content">

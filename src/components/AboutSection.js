@@ -9,10 +9,9 @@ const AboutSection = ({ setSectionShown }) => {
 
   useEffect(() => {
     if (inView) {
-      console.log("hello from about");
       setSectionShown("aboutSection");
     }
-  }, [inView]);
+  }, [inView, setSectionShown]);
 
   return (
     <section className="about home-sections">
